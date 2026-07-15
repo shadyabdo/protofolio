@@ -1,0 +1,281 @@
+/* 
+  =========================================
+  HASSAN ELSAID - PORTFOLIO DESIGN TOKENS
+  =========================================
+  
+  [AR] ملف أكواد الـ CSS :root والمتغيرات الجاهزة للنسخ لإعادة برمجة وتصميم معرض الأعمال (Portfolio).
+  هذا الملف يضم كافة الألوان، الأحجام، المسافات، الجريديانت، تأثيرات الـ Hover، والأنيميشن المستخدمة لتسهيل عمل أي مبرمج.
+  
+  [EN] CSS :root & Design Tokens ready to copy-paste for reprogramming the portfolio.
+  This file includes all custom properties for colors, sizes, spacing, gradients, hover effects, and animations.
+*/
+
+/* -------------------------------------------------------------
+   1. IMPORT FONTS / استيراد الخطوط الفاخرة المعتمدة
+   ------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* -------------------------------------------------------------
+   2. CSS :ROOT VARIABLES / متغيرات التصميم الأساسية
+   ------------------------------------------------------------- */
+:root {
+  /* --- A. COLOR PALETTES / لوحات الألوان الاحترافية --- */
+  
+  /* Primary Warm Theme / لوحة الألوان الدافئة الأساسية */
+  --color-warm-white: #FCF6F2;     /* Background / الخلفية المريحة للعين */
+  --color-warm-peach: #FDF0E6;     /* Sections or Cards / بطاقات وأقسام دافئة */
+  --color-warm-sand: #FCE5D6;      /* Borders & Accents / فواصل ودرجات رملية */
+  --color-brand-red: #FF334B;      /* Brand/CTA Highlight / تمييز لفت الانتباه */
+  --color-neutral-dark: #1A1A1E;   /* Main Typography / النصوص الأساسية والداكنة */
+
+  /* Soft Pastel Palette (Used in Selected Works & Badges) / لوحة الباستيل الناعمة للبطاقات والأوسمة */
+  --color-pastel-pink: #FBCFE8;    /* Soft Pink / وردي باستيل هادئ */
+  --color-pastel-yellow: #FEF9C3;  /* Soft Yellow / أصفر باستيل هادئ */
+  --color-pastel-blue: #BAE6FD;    /* Soft Blue / أزرق باستيل هادئ */
+  --color-pastel-green: #DCFCE7;   /* Soft Green / أخضر باستيل هادئ */
+  
+  /* Accent Colors / ألوان التأثير الإضافية */
+  --color-vibrant-blue: #0EA5E9;   /* UI Elements & Badges / عناصر وتلميحات زرقاء */
+  --color-action-orange: #FF5F00;  /* Secondary Actions / إجراءات فرعية برتقالية */
+  --color-accent-blue: #43acff;    /* Highlight Blue / أزرق متوهج للتأثيرات */
+  --color-accent-blue-hover: #1894ff;
+
+  /* --- B. TYPOGRAPHY SYSTEM / نظام النصوص والخطوط --- */
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: 'Plus Jakarta Sans', sans-serif; /* For Headings & Titles / للعناوين الضخمة */
+  --font-mono: 'JetBrains Mono', monospace;       /* For Data, Metadata & Numbers / للأرقام وبيانات المطور */
+
+  /* --- C. SPACING SCALE (MARGINS & PADDINGS) / نظام المسافات والهوامش --- */
+  --space-xs: 0.5rem;    /* 8px */
+  --space-sm: 0.75rem;   /* 12px */
+  --space-md: 1rem;      /* 16px */
+  --space-lg: 1.5rem;    /* 24px */
+  --space-xl: 2rem;      /* 32px */
+  --space-2xl: 3rem;     /* 48px */
+  --space-3xl: 4rem;     /* 64px */
+  --space-section: 6rem; /* 96px - Section Padding / هوامش بين الأقسام الكبيرة */
+
+  /* --- D. BORDER RADIUS / حواف العناصر المنحنية --- */
+  --radius-sm: 0.375rem; /* 6px */
+  --radius-md: 0.5rem;   /* 8px */
+  --radius-lg: 0.75rem;  /* 12px */
+  --radius-xl: 1rem;     /* 16px */
+  --radius-2xl: 1.5rem;  /* 24px */
+  --radius-3xl: 2rem;    /* 32px - Used for gorgeous large containers */
+  --radius-full: 9999px; /* Rounded Pills & Circles / للأزرار الدائرية والكبسولات */
+
+  /* --- E. SHADOWS (ELEGANT DEPTHS) / نظام الظلال والمحاكاة ثلاثية الأبعاد --- */
+  --shadow-sm: 0 1px 2px 0 rgba(26, 26, 30, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(26, 26, 30, 0.05), 0 2px 4px -1px rgba(26, 26, 30, 0.03);
+  --shadow-lg: 0 10px 15px -3px rgba(26, 26, 30, 0.05), 0 4px 6px -2px rgba(26, 26, 30, 0.02);
+  --shadow-xl: 0 20px 25px -5px rgba(26, 26, 30, 0.06), 0 10px 10px -5px rgba(26, 26, 30, 0.03);
+  --shadow-premium: 0 30px 60px -20px rgba(26, 26, 30, 0.05); /* Premium depth shadow */
+
+  /* --- F. TRANSITIONS & HOVERS / تأثيرات الانتقال والسرعة --- */
+  --transition-fast: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); /* Ultra smooth ease-out */
+}
+
+/* -------------------------------------------------------------
+   3. BASE STYLING / إعادة تهيئة الأنماط الأساسية
+   ------------------------------------------------------------- */
+body {
+  background-color: var(--color-warm-white);
+  color: var(--color-neutral-dark);
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Premium Scrollbar / شريط تمرير أنيق متناسق مع هوية الموقع */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-warm-white);
+}
+::-webkit-scrollbar-thumb {
+  background: #E8DFD8;
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #CDA0A5;
+}
+
+/* -------------------------------------------------------------
+   4. COMPONENT & CARD TOKENS (GLASS-MORPHISM & INTERACTION)
+   أكواد تصميم البطاقات والألواح الزجاجية والتفاعل مع الحركة
+   ------------------------------------------------------------- */
+
+/* Glass Panel / تصميم لوحة زجاجية ناعمة بخلفية ضبابية */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius-2xl);
+}
+
+/* Interactive Glass Panel (Premium Hover Animation) / لوحة زجاجية تفاعلية تتحرك للأعلى بنعومة وتلقي ظلاً خفيفاً عند التقريب */
+.glass-panel-interactive {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius-2xl);
+  transition: var(--transition-smooth);
+}
+
+.glass-panel-interactive:hover {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: var(--shadow-premium);
+  transform: translateY(-4px); /* Micro-translate up */
+}
+
+/* -------------------------------------------------------------
+   5. BACKDROP GLOW SYSTEM / نظام التوهج الخلفي الملون والأنيق
+   ------------------------------------------------------------- */
+.soft-glow-pink {
+  box-shadow: 0 0 50px 10px rgba(251, 207, 232, 0.25);
+}
+.soft-glow-blue {
+  box-shadow: 0 0 50px 10px rgba(186, 230, 253, 0.25);
+}
+.soft-glow-green {
+  box-shadow: 0 0 50px 10px rgba(220, 252, 231, 0.25);
+}
+.soft-glow-yellow {
+  box-shadow: 0 0 50px 10px rgba(254, 249, 195, 0.25);
+}
+
+/* -------------------------------------------------------------
+   6. MARQUEE & NEWS TICKER KEYFRAMES / شريط الأخبار والكلمات المتحرك اللانهائي
+   ------------------------------------------------------------- */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+/* Ticker Container Layout / تصميم حاوية الشريط المتدفق */
+.marquee-container {
+  overflow: hidden;
+  display: flex;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 60s linear infinite;
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee-reverse 60s linear infinite;
+}
+
+/* Pause flow on hover / إيقاف التدفق مؤقتاً عند مرور مؤشر الماوس */
+.animate-marquee:hover, 
+.animate-marquee-reverse:hover {
+  animation-play-state: paused;
+}
+
+/* -------------------------------------------------------------
+   7. DESIGN ACCENTS & COMPONENT SCHEMAS / الأزرار والروابط التفاعلية
+   ------------------------------------------------------------- */
+
+/* Navigation Link Accent Hover / تفاعل روابط شريط التنقل */
+.nav-link {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgba(26, 26, 30, 0.7);
+  transition: var(--transition-fast);
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: var(--color-neutral-dark);
+}
+
+.nav-link-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-accent-blue);
+  border-radius: var(--radius-full);
+}
+
+/* CTA Buttons / أزرار اتخاذ الإجراء والتحميل والمراسلة */
+.btn-primary {
+  padding: 14px 28px;
+  background-color: var(--color-neutral-dark);
+  color: #FFFFFF;
+  border-radius: var(--radius-xl);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  transition: var(--transition-normal);
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+  background-color: #27272C;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+  padding: 14px 24px;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(26, 26, 30, 0.1);
+  color: rgba(26, 26, 30, 0.8);
+  border-radius: var(--radius-xl);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  transition: var(--transition-normal);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.btn-secondary:hover {
+  background-color: #FFFFFF;
+  border-color: rgba(26, 26, 30, 0.2);
+  color: var(--color-neutral-dark);
+  transform: translateY(-2px);
+}
+
+/* -------------------------------------------------------------
+   8. HOW TO IMPLEMENT IN HTML / طريقة التطبيق في واجهة الـ HTML
+   ------------------------------------------------------------- */
+/*
+  Example Usage / مثال للاستخدام في كود الواجهة:
+  
+  <div class="glass-panel-interactive soft-glow-pink" style="padding: var(--space-xl); margin-bottom: var(--space-lg);">
+    <h3 style="font-family: var(--font-display); color: var(--color-neutral-dark);">Project Title</h3>
+    <p style="font-family: var(--font-sans); color: var(--color-neutral-dark); opacity: 0.8;">
+      This is a description using design tokens.
+    </p>
+    <button class="btn-primary">View Project</button>
+  </div>
+*/
