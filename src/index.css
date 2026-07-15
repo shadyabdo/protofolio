@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Custom Professional Colors based on screenshots */
+  /* Section 1: Hero & About Warm Palette */
+  --color-warm-white: #FCF6F2;
+  --color-warm-peach: #FDF0E6;
+  --color-warm-sand: #FCE5D6;
+  --color-brand-red: #FF334B;
+
+  /* Section 2: Pastel Colors from Screenshots */
+  --color-pastel-pink: #FBCFE8;
+  --color-pastel-yellow: #FEF9C3;
+  --color-pastel-blue: #BAE6FD;
+  --color-pastel-green: #DCFCE7;
+  --color-vibrant-blue: #0EA5E9;
+  --color-action-orange: #FF5F00;
+  
+  --color-neutral-dark: #1A1A1E;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-warm-white);
+    color: var(--color-neutral-dark);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Interactive glass panels & parallax effects */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.glass-panel-hover {
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 30px 60px -20px rgba(26, 26, 30, 0.05);
+  transform: translateY(-4px);
+}
+
+/* Infinite News Ticker Marquee Animations */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 60s linear infinite;
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee-reverse 60s linear infinite;
+}
+
+.animate-marquee:hover, .animate-marquee-reverse:hover {
+  animation-play-state: paused;
+}
+
+/* Subtle Glow Backdrop utility */
+.soft-glow-pink {
+  box-shadow: 0 0 50px 10px rgba(251, 207, 232, 0.25);
+}
+.soft-glow-blue {
+  box-shadow: 0 0 50px 10px rgba(186, 230, 253, 0.25);
+}
+.soft-glow-green {
+  box-shadow: 0 0 50px 10px rgba(220, 252, 231, 0.25);
+}
+.soft-glow-yellow {
+  box-shadow: 0 0 50px 10px rgba(254, 249, 195, 0.25);
+}
+
+/* Parallax helper layers */
+.parallax-bg {
+  transform: translate3d(0, var(--scroll-y, 0), 0);
+  will-change: transform;
+}
+
+/* Custom Scrollbar for premium feel */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-warm-white);
+}
+::-webkit-scrollbar-thumb {
+  background: #E8DFD8;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #CDA0A5;
+}
+
+/* Lenis smooth scrolling standard config */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* SweetAlert2 customizations for full-width buttons and modern layout */
+.swal2-actions {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin-top: 1.5rem !important;
+}
+
+.swal2-actions button.swal2-confirm {
+  width: auto !important;
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+  padding-left: 2.75rem !important;
+  padding-right: 2.75rem !important;
+  font-size: 0.75rem !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.swal2-actions button.swal2-cancel,
+.swal2-actions button.swal2-deny {
+  display: none !important;
+}
+
