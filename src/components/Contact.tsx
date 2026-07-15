@@ -267,7 +267,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="text-[10px] font-bold text-gray-400 uppercase tracking-widest font-mono">Email Address</h4>
-                    <a href="mailto:massan@gmail.com" className="text-sm font-bold text-neutral-dark hover:text-brand-red transition-colors">
+                    <a href="#" className="text-sm font-bold text-neutral-dark hover:text-brand-red transition-colors">
                       massan@gmail.com
                     </a>
                   </div>
@@ -280,7 +280,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="text-[10px] font-bold text-gray-400 uppercase tracking-widest font-mono">Phone Call</h4>
-                    <a href="tel:+821236758" className="text-sm font-bold text-neutral-dark hover:text-brand-red transition-colors">
+                    <a href="#" className="text-sm font-bold text-neutral-dark hover:text-brand-red transition-colors">
                       +82-123 6758
                     </a>
                   </div>

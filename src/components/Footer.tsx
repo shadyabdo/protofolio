@@ -112,19 +112,19 @@ export default function Footer({ onScrollTo }: FooterProps) {
               </p>
               <p className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#43acff]"></span>
-                <a href="mailto:za9hl00l@gmail.com" className="hover:underline font-semibold text-neutral-dark">
+                <a href="#" className="hover:underline font-semibold text-neutral-dark">
                   za9hl00l@gmail.com
                 </a>
               </p>
               <p className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#43acff]"></span>
-                <a href="tel:+201210378575" className="hover:underline font-semibold text-neutral-dark">
+                <a href="#" className="hover:underline font-semibold text-neutral-dark">
                   +201210378575
                 </a>
               </p>
               <p className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#43acff]"></span>
-                <a href={HERO_DATA.socials.linkedin} target="_blank" rel="noopener noreferrer" className="hover:underline font-semibold text-neutral-dark">
+                <a href="#" className="hover:underline font-semibold text-neutral-dark">
                   linkedin / hassan-elsaid
                 </a>
               </p>
@@ -143,7 +143,7 @@ export default function Footer({ onScrollTo }: FooterProps) {
                 { icon: <Instagram className="w-4 h-4" />, href: HERO_DATA.socials.instagram, label: 'Instagram' },
                 { icon: <Linkedin className="w-4 h-4" />, href: HERO_DATA.socials.linkedin, label: 'LinkedIn' },
                 { icon: <Github className="w-4 h-4" />, href: HERO_DATA.socials.github, label: 'GitHub' },
-                { icon: <MessageCircle className="w-4 h-4" />, href: 'https://wa.me/201210378575', label: 'WhatsApp' }
+                { icon: <MessageCircle className="w-4 h-4" />, href: '#', label: 'WhatsApp' }
               ].map((soc, idx) => (
                 <a
                   key={idx}

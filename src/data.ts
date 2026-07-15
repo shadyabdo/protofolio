@@ -13,10 +13,10 @@ export const HERO_DATA = {
     { label: 'Happy Clients', value: '15+' }
   ],
   socials: {
-    linkedin: 'https://linkedin.com/in/hassan-elsaid',
-    github: 'https://github.com/hassan-elsaid',
-    twitter: 'https://twitter.com/hassan-elsaid',
-    instagram: 'https://instagram.com/hassan-elsaid'
+    linkedin: '#',
+    github: '#',
+    twitter: '#',
+    instagram: '#'
   }
 };
 
