@@ -105,7 +105,7 @@ export const PROJECTS: Project[] = [
     title: 'PayPastel Budgeting App',
     category: 'Mobile App Design',
     description: 'An elegant personal budgeting and digital wallet app interface designed with soft pastel elements and fluid transitions to help users manage assets effortlessly.',
-    imageUrl: '/src/assets/images/app_mockup_1_1784120855935.jpg',
+    imageUrl: '/src/assets/images/hassan_avatar_1784120839322.jpg',
     tags: ['Figma', 'UI/UX Design', 'Mobile', 'Prototyping'],
     demoUrl: '#',
     githubUrl: '#'
@@ -115,7 +115,7 @@ export const PROJECTS: Project[] = [
     title: 'Premium Brand Experience',
     category: 'Branding',
     description: 'A complete modern corporate brand identity overhaul including visual patterns, custom vector iconography, and typography guides designed for an eco-friendly tech client.',
-    imageUrl: 'https://images.unsplash.com/photo-1542744094-3a31f103e35f?q=80&w=600&auto=format&fit=crop',
+    imageUrl: '/src/assets/images/hassan_avatar_1784120839322.jpg',
     tags: ['Illustrator', 'Adobe XD', 'Creative Direction'],
     demoUrl: '#',
     githubUrl: '#'
@@ -125,7 +125,7 @@ export const PROJECTS: Project[] = [
     title: 'TypeSync Code Editor',
     category: 'Web Development',
     description: 'A web-based collaborative code editing interface with live compilation preview, real-time sync capabilities, and developer-centric syntax styling themes.',
-    imageUrl: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=600&auto=format&fit=crop',
+    imageUrl: '/src/assets/images/hassan_avatar_1784120839322.jpg',
     tags: ['React', 'TypeScript', 'Tailwind', 'Monaco'],
     demoUrl: '#',
     githubUrl: '#'
@@ -135,7 +135,7 @@ export const PROJECTS: Project[] = [
     title: 'Nebula SaaS Analytics Dashboard',
     category: 'UI/UX Design',
     description: 'An advanced data dashboard utilizing elegant visual charts and interactive maps to offer deep insights into user metrics, subscription sales, and server loads.',
-    imageUrl: '/src/assets/images/web_mockup_2_1784120871084.jpg',
+    imageUrl: '/src/assets/images/hassan_avatar_1784120839322.jpg',
     tags: ['React', 'Recharts', 'Tailwind', 'UX Design'],
     demoUrl: '#',
     githubUrl: '#'
@@ -145,7 +145,7 @@ export const PROJECTS: Project[] = [
     title: 'VibeCheck Social Planner',
     category: 'Mobile App Design',
     description: 'A comprehensive mobile planning tool featuring drag-and-drop editorial calendars, performance statistics, and AI caption writing assistants for social media managers.',
-    imageUrl: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=600&auto=format&fit=crop',
+    imageUrl: '/src/assets/images/hassan_avatar_1784120839322.jpg',
     tags: ['Figma', 'Mobile Design', 'UI/UX'],
     demoUrl: '#',
     githubUrl: '#'
